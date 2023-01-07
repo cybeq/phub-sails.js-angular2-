@@ -19,7 +19,14 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
+  // route na builda(socket dziala na buildzie)
+  // '/*': {
+  //   controller: 'AppController', action: 'staging', skipAssets: true, skipRegex: /^\/(api|ws)\/.*$/
+  // },
+
+  // route na produkcji(socket dziala na produkcji)
+  '/*':{view:'index'},
+
   'POST /api/login':'UserController.loginUser',
   'POST /api/register':'UserController.createUser',
   'GET /api/get':'UserController.getUser',

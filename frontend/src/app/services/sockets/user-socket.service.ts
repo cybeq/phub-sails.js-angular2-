@@ -8,7 +8,13 @@ export class UserSocketService {
   socket:any;
   url ="http://localhost:1337/api/"
   constructor() {
+    // wersja na produkcje
     io.sails.url = 'http://localhost:1337';
+
+    // wersja na builda
+    // io.sails.url = '/';
+
+    io.sails.transports = ['polling'];
     this.socket = io.sails.connect();
 
     // Subscribe to the 'connect' event:
