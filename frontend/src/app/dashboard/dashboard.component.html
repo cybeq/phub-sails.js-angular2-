@@ -1,0 +1,52 @@
+
+
+<div class="dashboard_navigator" *ngIf="user">
+  <div style="text-align: center; padding-block: 20px">
+  <img src="/assets/images/phub.png" width="80%"/>
+    <button class="nav_click_menu" (click)="userOptionContainer = !userOptionContainer">
+      <img src="{{user.picture}}" width="20px" style="vertical-align: middle; border-radius:100%; margin-right:10px;"/>
+      {{user.username}}
+      <span class="material-symbols-outlined">▼</span></button>
+    <div *ngIf="userOptionContainer">
+    <button *ngFor="let all of userOptions" class="nav_click_menu"
+            style="cursor:pointer;"
+            (click)="all.function ? logout() : all.name==='dashboard/profile' ?this.router.navigate(['dashboard/profile/'+user.id]) :this.router.navigate(['/'+all.name])">
+            {{all.text}}</button>
+    </div>
+    <div style="margin-top:35px;">
+      <button class="nav_click_menu_other">✉ Wiadomosci</button>
+      <button class="nav_click_menu_other">⛶ Twoje zdjecia</button>
+      <button class="nav_click_menu_other">⛹ Znajomi</button>
+      <button class="nav_click_menu_other">🔍︎ Szukaj ludzi</button>
+      <div class="dividing_line"></div>
+      <button class="nav_click_menu_other">♨ Szukaj imprez</button>
+      <button class="nav_click_menu_other">⚐︎ Tablica</button>
+      <button class="nav_click_menu_other">⚛ Twoje imprezy</button>
+      <button class="nav_click_menu_other">⚅ PartyRoulette</button>
+
+
+
+    </div>
+  </div>
+</div>
+<!--unlogged navigator-->
+<div *ngIf="!user" class="dashboard_navigator" >
+  <div style="text-align: center; padding-block: 20px">
+    <img src="/assets/images/phub.png" width="80%"/>
+    <div style="margin-top:35px;">
+      <div class="dividing_line"></div>
+      <label class="unlogged_info">Nie jesteś zalogowany. <br/>❤ Aby korzystac ze wszystkich uslug serwisu <strong>zaloguj sie</strong> lub zaloz nowe konto ❤</label>
+      <div class="dividing_line"></div>
+      <button class="nav_click_menu_other" (click)="router.navigate(['/login'])">⛖ Zaloguj sie</button>
+      <button class="nav_click_menu_other" (click)="router.navigate(['/register'])">⚿ Zarejestruj sie</button>
+      <div class="dividing_line"></div>
+      <button class="nav_click_menu_other">♨ Szukaj imprez</button>
+      <button class="nav_click_menu_other">🔍︎ Szukaj ludzi</button>
+
+    </div>
+  </div>
+</div>
+
+<div class="dashboard_container">
+<router-outlet></router-outlet>
+</div>

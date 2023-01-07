@@ -1,0 +1,21 @@
+<div class="welcome_container" *ngIf="!logged">
+
+<img src="/assets/images/phub.png" width="200px"/>
+  <div>
+    <button *ngIf="!logged" routerLink="/login" class="login_button"  style="background: #3aadc4;">Zaloguj się</button>
+    <button *ngIf="!logged" routerLink="/register" class="login_button">Zarejestruj się</button>
+    <button *ngIf="logged" (click)="logout()" class="login_button" style="background: #3aadc4;">Wyloguj się</button>
+  </div>
+</div>
+
+<div class="grid_container" >
+<div class="welcome_hello">
+<h1>Dodawaj imprezy<span style="color: #3aadc4">!</span></h1>
+  <h2>Wybieraj kluby w twoim City</h2>
+  <h2>i docieraj na zabawy blisko Ciebie</h2><br/>
+  <button>imprezowiczu</button><p>trafiłeś do miejsca, które uratuje Ci sobotni wieczór</p>
+</div>
+<div class="welcome_panda">
+  <img src="/assets/images/panda_pc.png"/>
+</div>
+</div>

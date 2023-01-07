@@ -1,0 +1,25 @@
+
+
+
+<div class="login_container">
+
+
+
+  <div class="login_grider">
+    <img src="/assets/images/phub.png" width="200px"/>
+
+    <button class="register_type_button" style="background: #116bd3">Facebook</button>
+    <button class="register_type_button" style="background: #a911d3">Instagram</button>
+    <button class="register_type_button" style="background: #ad1433; color:white">Google</button>
+    <div class="register_error" *ngIf="error">
+      <span style="color:red; font-size:1.2em;">!</span> {{error}}
+    </div>
+
+    <label>Adres email</label>
+    <input type="text" [(ngModel)]="email">
+    <label>Hasło</label>
+    <input type="password" [(ngModel)]="password">
+    <button class="confirm_login" (click)="login()">Zaloguj</button>
+
+  </div>
+</div>

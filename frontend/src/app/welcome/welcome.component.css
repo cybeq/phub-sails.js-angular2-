@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+div[class='welcome_container']{
+
+  width:100%;
+  height: 200px;
+  background: url("/assets/images/welcome_corner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+div[class='welcome_hello'] {
+  font-family: 'Changa One', cursive;
+  font-size:2rem;
+  padding-inline:10%;
+  color: #202224;
+}
+h1,h2, h3{
+  margin:0; padding:0;
+}
+button{
+  font-family: "Lucida Sans Unicode";
+  color:white;
+  background: #202224;
+  padding: 4px;
+  border:none;
+  border-radius:3px;
+  font-size:0.6em;
+  padding-inline: 12px;
+  vertical-align: middle;
+  cursor:pointer;
+}
+p{
+  vertical-align: middle;
+  font-family: "Lucida Sans Unicode";
+  display: inline;
+  font-size:0.6em;
+  margin-left: 10px;
+}
+div[class='welcome_panda'] img{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.grid_container{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+button[class="login_button"]{
+  font-size:1.0em;
+  width:150px;
+  margin: 10px;
+}
+
+@media(max-width: 900px) {
+  .grid_container{
+    display: block;
+    margin-top:-50px;
+  }
+  div[class='welcome_hello'] {
+  font-size:1.2rem;
+  }
+  div[class='welcome_container']{
+
+  }
+  div[class='welcome_panda'] img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width:80%;
+  }
+}

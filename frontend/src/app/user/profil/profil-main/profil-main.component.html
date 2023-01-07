@@ -1,0 +1,14 @@
+<div *ngIf="!user && !noUserError" style="display: flex;align-items: center;justify-content: center">
+<img src="/assets/images/loading.gif">
+</div>
+<div *ngIf="noUserError">{{noUserError}}</div>
+
+<div class="profil_container" *ngIf="user">
+<div style="background: #202224; color:white">
+  <h1>{{user.username}}, {{this.userAge}} lat</h1>
+  <p *ngIf="owner">To twoje konto</p>
+  <img src="{{user.picture}}" width="50%" style="border-radius:5px"/>
+
+</div>
+<div></div>
+</div>

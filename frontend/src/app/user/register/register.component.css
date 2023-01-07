@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+div[class='register_container']{
+  padding:2%;
+  min-height:100vh;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Abel', sans-serif;
+  background: #1f2022;
+
+}
+.register_grider{
+  padding-inline:12%;
+  padding-top:8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+}
+button[class='register_type_button']{
+  padding:10px;
+  font-size:1.5em;
+  font-family: 'Abel', sans-serif;
+  border: none;
+  color:white;
+  margin-block:30px;
+  opacity:0.9;
+  width:70%;
+}
+input[type='text'], input[type="password"], input[type="email"]{
+  width:80%;
+  display: block;
+  height:35px;
+  font-size:1.1em;
+  border:none;
+  outline:none;
+  border-radius:3px;
+  margin-block: 15px;
+}
+label{
+  color:white;
+}
+.confirm_register{
+  border: none;
+  background: #0c8da0;
+  box-shadow: #ffffff20 2px 2px 2px;
+  border-radius:3px;
+  cursor:pointer;
+  padding:10px;
+  font-size:1.2em;
+  font-family: 'Abel', sans-serif;
+  color:white;
+}
+label[class='city_hint']{
+  background: #ffffff20;
+  margin-block:4px;
+  border-radius:3px;
+  padding:4px;
+  display: block;
+  cursor:pointer;
+}
+label[class='city_hint']:hover{
+  background: #ffffff40;
+
+}
+.register_error{
+  border: solid #b91b1b 3px;
+  border-radius: 6px;
+  padding:15px;
+  margin-bottom: 20px;
+  color:white;
+  width:80%;
+  word-break: break-word;
+
+}
+#city:focus{
+  background: #ffffff60;
+}
+.date_select{
+  width:100%;
+  display: block;
+}
+.date_select select{
+  width:27%;
+  padding: 4px;
+  font-size:1.2em;
+
+}

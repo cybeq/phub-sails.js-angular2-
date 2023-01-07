@@ -1,0 +1,13 @@
+.profil_container{
+  padding:4%;
+  font-family: 'Abel', sans-serif;
+  color: #202224;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.profil_container div{
+  width:100%;
+  border-radius: 10px;
+  min-height: 400px;
+  padding:2%;
+}
