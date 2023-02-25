@@ -13,7 +13,7 @@ The project being the initiation of a social network site.
 ```
 $ npm run start
 ```
--start ng app
+- start ng app
 ```
 $ npm i @angular/cli
 $ ng serve --proxy-config ./src/proxy.conf.json
