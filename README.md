@@ -11,9 +11,10 @@ The project being the initiation of a social network site.
 ## Run dev
 - start sails server
 ```
-npm run start
+$ npm run start
 ```
 -start ng app
 ```
-ng serve --proxy-config ./src/proxy.conf.json
+$ npm i @angular/cli
+$ ng serve --proxy-config ./src/proxy.conf.json
 ```
